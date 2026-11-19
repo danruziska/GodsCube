@@ -5,11 +5,11 @@ using UnityEngine.InputSystem.UI;
 
 namespace Cubo.View
 {
-    // Pede para mostrar o detalhe de um botão: com mouse, enquanto o cursor está em cima; com o dedo,
-    // depois de segurar holdSeconds. Quem trata o clique pergunta ConsumeHold(): se foi uma segurada, não é para usar o botão.
+    // Pede para mostrar o detalhe de um botão: enquanto o cursor está em cima, ou depois de segurar o botão do
+    // mouse por holdSeconds. Quem trata o clique pergunta ConsumeHold(): se foi uma segurada, não é para usar o botão.
     public sealed class HoldDetail : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
     {
-        [Tooltip("Quanto tempo o dedo fica parado no botão para mostrar o detalhe, em segundos.")]
+        [Tooltip("Quanto tempo o botão do mouse fica segurado para mostrar o detalhe, em segundos.")]
         [SerializeField] private float holdSeconds = 0.35f;
 
         public event Action<bool> Showing;     // true: mostrar o detalhe; false: esconder
@@ -17,7 +17,7 @@ namespace Cubo.View
         private bool _down, _hover, _wasHold, _shown;
         private float _held;
 
-        // No celular o "entrar" acontece junto com o toque; ali quem manda é o tempo segurado.
+        // Numa tela sensível ao toque o "entrar" acontece junto com o toque; ali quem manda é o tempo segurado.
         private static bool IsTouch(PointerEventData e) =>
             e is ExtendedPointerEventData x && x.pointerType == UIPointerType.Touch;
 

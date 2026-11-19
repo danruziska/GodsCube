@@ -60,11 +60,13 @@ namespace Cubo.App
         // T("fx.heal", ("n", 12)) troca {n} por 12.
         public string T(string key, params (string name, object value)[] args)
         {
-            if (!_ui[Lang].TryGetValue(key, out var s) && !_ui["pt"].TryGetValue(key, out s)) return "⟦" + key + "⟧";
+            if (!Find(key, out var s)) return "⟦" + key + "⟧";
             foreach (var (name, value) in args)
                 s = s.Replace("{" + name + "}", Convert.ToString(value, CultureInfo.InvariantCulture));
             return s;
         }
+
+        private bool Find(string key, out string s) => _ui[Lang].TryGetValue(key, out s) || _ui["pt"].TryGetValue(key, out s);
 
         // Nomes próprios: Name("hero.rei"), Name("power.rei.0"), Name("passive.investida"), Name("domain.sol").
         public string Name(string key)

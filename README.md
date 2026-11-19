@@ -2,7 +2,7 @@
 
 A turn-based roguelite where every battle is fought on a 3D cube of elemental pieces. Pick a team of three heroes, climb six floors, and build your run around combos that start rare and grow as you get stronger.
 
-Made with Unity 6 for Android (portrait), with a pixel art UI. The internal codename is **GodsCube** (and `Cubo` in the code, since it started as a Portuguese project).
+A Windows game made with Unity 6, with a pixel art UI. It plays with the mouse in a tall 9:16 window. The internal codename is **GodsCube** (and `Cubo` in the code, since it started as a Portuguese project).
 
 <!--
   Screenshot / GIF goes here, e.g.:
@@ -16,6 +16,7 @@ Made with Unity 6 for Android (portrait), with a pixel art UI. The internal code
 - [How it plays](#how-it-plays)
 - [Features](#features)
 - [Getting started](#getting-started)
+- [Building for Windows](#building-for-windows)
 - [Running the tests](#running-the-tests)
 - [Project layout](#project-layout)
 - [Game data](#game-data)
@@ -27,7 +28,7 @@ Made with Unity 6 for Android (portrait), with a pixel art UI. The internal code
 
 You and a rival share one cube. Each side has an altar: yours is the golden face at the front, theirs is the red face at the back.
 
-1. **Fire a group.** Tap a patch of two or more connected pieces of the same color on your face. They break, the pieces above fall into place and new ones come in. If falling pieces line up three or more of a color, they fire too, and the chain keeps going.
+1. **Fire a group.** Click a patch of two or more connected pieces of the same color on your face. They break, the pieces above fall into place and new ones come in. If falling pieces line up three or more of a color, they fire too, and the chain keeps going.
 2. **Use your powers.** Broken pieces fill your heroes' mana. Each hero has two powers tied to two of the six elements: damage, healing, critical hits, purging colors from the board and so on.
 3. **Hand over a face.** At the end of your turn you pick one of the neighbouring faces and give it to the rival. That choice is the heart of the game: you want to leave them as little as possible while setting up the next face that comes back to you.
 
@@ -52,7 +53,7 @@ Between battles you visit a shop, receive blessings, run into events and choose 
 ### Requirements
 
 - [Unity **6000.6.4f1**](https://unity.com/releases/editor/archive) (other Unity 6 versions may work but are not tested)
-- Android Build Support, if you want to build for a phone
+- **Windows Build Support (Mono)**, added in Unity Hub under **Installs ▸ 6000.6.4f1 ▸ Add modules**
 - [.NET SDK 8](https://dotnet.microsoft.com/download) or newer, only for running the logic tests outside Unity
 
 Everything else the project needs is already in the repo or comes from the Unity Package Manager.
@@ -61,8 +62,9 @@ Everything else the project needs is already in the repo or comes from the Unity
 
 1. Clone this repository.
 2. Add the cloned folder in Unity Hub and open it with Unity 6000.6.4f1. The first import takes a while.
-3. Open `Assets/Game/Content/Materials/Scenes/Main.unity`.
-4. Press Play. The Game view looks best with a portrait phone resolution such as 1080x2400.
+3. Go to **File ▸ Build Profiles**, select **Windows** and press **Switch Platform** if it is not the active platform yet.
+4. Open `Assets/Game/Content/Materials/Scenes/Main.unity`.
+5. Set the Game view to a portrait resolution such as 1080x1920 (the UI is laid out for a tall 9:16 window) and press Play.
 
 ### Shortcuts for testing
 
@@ -77,9 +79,26 @@ While in Play mode there are a few shortcuts to move faster:
 
 The function keys only work inside the editor. You can also find them, along with the screen picker, under the **Cubo ▸ Teste** menu.
 
-### Build for Android
+## Building for Windows
 
-Go to **File ▸ Build Profiles**, select Android, make sure `Main` is in the scene list and press **Build**.
+1. Go to **File ▸ Build Profiles** and select **Windows**.
+2. Make sure `Main` is in the scene list.
+3. Under **Player Settings ▸ Other Settings**, keep **Scripting Backend** on **Mono**. IL2CPP builds for Windows can only be made on a Windows computer; Mono works from Windows and from macOS.
+4. Press **Build** and pick an empty folder.
+5. To share the game, zip the whole folder. The `.exe` needs the `_Data` folder and the other files next to it.
+
+When it starts, the game opens a 9:16 window as tall as the screen allows, leaving the taskbar visible. The window cannot be resized or switched to full screen, because the UI is laid out for that shape. Close the window to quit.
+
+### Controls
+
+| Action | Mouse |
+| --- | --- |
+| Pick and fire a group | Click it |
+| Use a power | Click it when its bar is full |
+| See what a power, rune or item does | Hover over it, or hold the mouse button on it |
+| Aim poison or burn | Hold the mouse button on the cube, let go to place the area |
+| Hand over a face | Click a neighbouring face, then **Hand over** |
+| Scroll a list | Drag it or use the mouse wheel |
 
 ## Running the tests
 

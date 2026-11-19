@@ -34,7 +34,7 @@ namespace Cubo.View
         {
             if (_style == null) { _style = new GUIStyle(GUI.skin.label); _style.fontSize = Mathf.Max(14, Screen.height / 50); }
             var safe = Screen.safeArea;
-            float top = Screen.height - safe.yMax + 6f;       // abaixo do entalhe da câmera
+            float top = Screen.height - safe.yMax + 6f;       // abaixo da área segura do topo
             GUI.Label(new Rect(safe.x + 8f, top, safe.width - 16f, _style.fontSize * 2f), _text, _style);
         }
     }

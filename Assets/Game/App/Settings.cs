@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Cubo.App
 {
-    // Os ajustes do jogador (ajustes.json). Lang null = seguir o idioma do aparelho.
+    // Os ajustes do jogador (ajustes.json). Lang null = seguir o idioma do sistema.
     public sealed class Settings
     {
         public const int Version = 4;        // 2: o cubo passou a 6x6; 3: 8x8 para testar; 4: de volta a 6x6 (o tamanho gravado antes é esquecido)

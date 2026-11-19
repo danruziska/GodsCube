@@ -3,19 +3,19 @@ using UnityEngine;
 
 namespace Cubo.View
 {
-    // Faz este RectTransform ocupar só a área segura da tela (fora do notch e da barra de gestos).
-    // Tudo o que estiver dentro dele fica visível em qualquer aparelho. Avisa quando a área muda.
+    // Faz este RectTransform ocupar a área útil da janela (Screen.safeArea), com um respiro em cada borda.
+    // Tudo o que estiver dentro dele fica visível em qualquer tamanho de janela. Avisa quando a área muda.
     [RequireComponent(typeof(RectTransform))]
     public sealed class SafeArea : MonoBehaviour
     {
-        [Tooltip("Margem mínima embaixo, em unidades do Canvas (referência 1080x1920). Cantos arredondados e telas curvas " +
-                 "não entram na área segura do Android: com isso o conteúdo de baixo não fica cortado. Zero: só a área segura.")]
+        [Tooltip("Margem mínima embaixo, em unidades do Canvas (referência 1080x1920). Garante um respiro " +
+                 "na borda de baixo da janela, para o conteúdo de baixo não ficar colado nela. Zero: sem margem extra.")]
         [SerializeField] private float minBottom;
         [Header("Respiro por dentro da área segura")]
         [Tooltip("Espaço a mais em cada lado (esquerda e direita), em unidades do Canvas, por dentro da área segura: o conteúdo " +
-                 "não encosta na borda do aparelho nem nos cantos arredondados. O fundo da tela fica fora da SafeArea e não muda.")]
+                 "não encosta na borda da janela. O fundo da tela fica fora da SafeArea e não muda.")]
         [SerializeField] private float sidePadding = 24f;
-        [Tooltip("Espaço a mais em cima, por dentro da área segura (abaixo do notch).")]
+        [Tooltip("Espaço a mais em cima, por dentro da área segura.")]
         [SerializeField] private float topPadding = 16f;
         [Tooltip("Espaço a mais embaixo, por dentro da área segura (somado ao Min Bottom).")]
         [SerializeField] private float bottomPadding = 16f;

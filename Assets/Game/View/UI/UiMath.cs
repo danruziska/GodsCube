@@ -31,7 +31,7 @@ namespace Cubo.View
         }
 
         // Quanto falta, em unidades do Canvas, para a borda da área segura ficar a pelo menos minUnits da borda da tela.
-        // Cantos arredondados e telas curvas não entram no Screen.safeArea do Android: a margem mínima cobre isso.
+        // Uma margem mínima embaixo, além do Screen.safeArea, para o conteúdo não ficar colado na borda da janela.
         // safeInsetPixels é a distância (em pixels de tela) que o aparelho já reserva; canvasScale, o Canvas.scaleFactor.
         public static float MinInset(float safeInsetPixels, float canvasScale, float minUnits)
         {

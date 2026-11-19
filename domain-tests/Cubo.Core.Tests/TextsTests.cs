@@ -106,5 +106,28 @@ namespace Cubo.Core.Tests
             t.SetLang("es");
             Assert.Equal("Puede entregar la cara prohibida.", HeroesModel.PassiveText(Data, t, Passives.Trick));
         }
+
+        // The game is played with a mouse on Windows: no text tells the player to tap or use a finger.
+        [Theory]
+        [InlineData("en", @"\b(tap|taps|tapped|tapping|touch|finger|swipe)\b")]
+        [InlineData("pt", @"\b(toque|toques|tocar|tocado|tocados|tocada|toca|dedo|deslize)\b")]
+        [InlineData("es", @"\b(toca|tocar|tocado|tocan|toque|dedo|desliza)\b")]
+        public void No_text_talks_about_touch(string lang, string touchWords)
+        {
+            var t = Make(lang);
+            var re = new System.Text.RegularExpressions.Regex(touchWords, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            foreach (var key in t.UiKeys(lang))
+            {
+                string text = t.T(key);
+                Assert.False(re.IsMatch(text), $"{lang} {key}: \"{text}\"");
+            }
+        }
+
+        [Fact]
+        public void Texts_tell_the_player_to_click()
+        {
+            Assert.Equal("Your turn · click a group on the front", Make("en").T("turn.can"));
+            Assert.Equal("Sua vez · clique num grupo da frente", Make("pt").T("turn.can"));
+        }
     }
 }

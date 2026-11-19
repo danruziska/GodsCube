@@ -27,12 +27,11 @@ namespace Cubo.Build
             importer.npotScale = TextureImporterNPOTScale.None;
             importer.textureCompression = TextureImporterCompression.Uncompressed;
             importer.maxTextureSize = 2048;
-            foreach (var platform in new[] { "Android", "iPhone", "Standalone" })
+            var standalone = importer.GetPlatformTextureSettings("Standalone");
+            if (standalone.overridden)
             {
-                var settings = importer.GetPlatformTextureSettings(platform);
-                if (!settings.overridden) continue;
-                settings.format = TextureImporterFormat.RGBA32;
-                importer.SetPlatformTextureSettings(settings);
+                standalone.format = TextureImporterFormat.RGBA32;
+                importer.SetPlatformTextureSettings(standalone);
             }
         }
 

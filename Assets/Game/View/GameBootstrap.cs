@@ -37,7 +37,7 @@ namespace Cubo.View
                  "A área de toque continua a mesma, então sobra espaço dos lados para girar a vista.")]
         [SerializeField, Min(1f)] private float cubeMargin = 1.15f;
         [SerializeField] private uint seed;                // 0 = uma semente nova a cada abertura
-        [Tooltip("Mostra os números de FPS, tempo de quadro e memória no canto da tela. Desligue para a build de teste no aparelho.")]
+        [Tooltip("Mostra os números de FPS, tempo de quadro e memória no canto da tela. Desligue para a build de teste.")]
         [SerializeField] private bool showPerfOverlay = true;
 
         private GameFlow _flow;
@@ -48,12 +48,11 @@ namespace Cubo.View
         private enum Tab { Gods = 0, Battle = 1, Equip = 2 }      // o índice de cada aba nos Items da barra
         private Tab _tab = Tab.Gods;                               // a aba da preparação em que o jogador está
 
-        // Ajustes do aparelho: 60 quadros, tela que não apaga durante a batalha, números na tela em desenvolvimento.
+        // 60 quadros por segundo e, em desenvolvimento, os números de desempenho na tela.
         private void Awake()
         {
-            QualitySettings.vSyncCount = 0;               // no Android o targetFrameRate só vale com vsync desligado
+            QualitySettings.vSyncCount = 0;               // o targetFrameRate só vale com vsync desligado
             Application.targetFrameRate = 60;
-            Screen.sleepTimeout = SleepTimeout.NeverSleep;
             if (showPerfOverlay && Debug.isDebugBuild) gameObject.AddComponent<PerfOverlay>();
         }
 
