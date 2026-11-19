@@ -1,0 +1,33 @@
+{
+ "numColors": 6,
+ "minGroup": 2,
+ "cascadeMin": 3,
+ "bonusFrom": 3,
+ "damageMin": 3,
+ "elements": {"beats": [1, 2, 4, 0, 5, 3], "strong": 0.5, "weak": 0.25,
+  "note": "beats[cor] = a cor que ela vence. 0 raio, 1 água, 2 fogo, 3 terra, 4 folha, 5 ar: água>fogo>folha>ar>terra>raio>água"},
+ "hazards": {"min": 4, "area": 3, "rounds": 3,
+  "note": "Veneno e queimadura (itens poison e burn): um grupo TOCADO de min+ peças arma o item; a área (area x area) vai na face entregue e some depois de rounds rodadas"},
+ "damagePerPiece": 1,
+ "manaPerPiece": 1,
+ "groupBonus": 2,
+ "manaCap": 15,
+ "costScale": {"dificil": {"7": 1.15, "8": 1.15}},
+ "rivalHpBonus": 0.1,
+ "comboChance": {"player": 0, "enemy": 0},
+ "comboMax": 0.8,
+ "hpEasy": {"4": 110, "5": 115, "6": 125, "7": 140, "8": 160},
+ "hpHard": {"4": 105, "5": 120, "6": 135, "7": 145, "8": 160},
+ "critChance": {"player": 0.05, "enemy": 0.05},
+ "critMax": 0.6,
+ "critMultiplier": 2,
+ "secondMana": 1,
+ "passives": {"chargeMinGroup": 4, "chargeBonus": 0.15, "decreeDiscount": 1, "communionMana": 1},
+ "sizes": [4, 5, 6, 7, 8],
+ "defaultSize": 6,
+ "ai": {
+  "levels": {"distraido": 3, "atento": 8, "implacavel": 999},
+  "handLook": {"distraido": 2, "atento": 3, "implacavel": 4}
+ },
+ "enemyDefaultNote": "Os poderes do rival não recebem o multiplicador de dano por andar; só os grupos disparados."
+}

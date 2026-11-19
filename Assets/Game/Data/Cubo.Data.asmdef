@@ -1,0 +1,16 @@
+{
+    "name": "Cubo.Data",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f578101e4ea0f4116ac30dd12b643713"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

@@ -1,0 +1,25 @@
+{
+ "ids": [
+  "idolo",
+  "acampamento",
+  "juramento"
+ ],
+ "perRun": 3,
+ "idols": ["rei", "rainha", "torre"],
+ "note": "Cada corrida tem perRun eventos, cada um uma vez, em andares sorteados (entre as batalhas). idolo: um dos idols (sorteado na corrida). Sangue = dar idolBlood de vida máxima de um herói; ira = o próximo rival com dano x idolWrath. rei: sangue +idolCrit de crítico, ira +idolDmg de dano. rainha: sangue +idolMana de mana inicial em cada poder, ira os poderes custam idolCost a menos. torre: sangue idolWard de dano a menos, ira +idolHp de vida máxima em cada herói. Tudo até o fim da corrida. acampamento: o próximo rival com campAmbush a menos de vida, ou marcar o herói do rival com mais vida (leva +campMark de dano do jogador na próxima batalha), ou +campRaid de ouro. juramento: um voto para a próxima batalha (vencer até a rodada vowRounds, sem usar poderes, ou sem nenhum herói cair); cumprido: +vowGold.",
+ "numbers": {
+  "idolBlood": 10,
+  "idolCrit": 0.10,
+  "idolWrath": 1.2,
+  "idolDmg": 0.10,
+  "idolMana": 4,
+  "idolCost": 1,
+  "idolWard": 0.10,
+  "idolHp": 15,
+  "campAmbush": 0.2,
+  "campMark": 0.25,
+  "campRaid": 40,
+  "vowGold": 80,
+  "vowRounds": 8
+ }
+}

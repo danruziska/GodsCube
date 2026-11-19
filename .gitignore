@@ -1,0 +1,108 @@
+# ---------------------------------------------------------------
+# Unity: folders the editor generates. Delete them and Unity
+# rebuilds them on the next import.
+# ---------------------------------------------------------------
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Pp]rofilerCaptures/
+
+# Asset Store publishing tools
+/[Aa]ssets/AssetStoreTools*
+
+# Build backups and debug symbols Unity writes next to a build
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+*_BurstDebugInformation_DoNotShip/
+
+# Android build cache
+/.utmp/
+.gradle/
+
+# Crash reports and system info
+sysinfo.txt
+crashlytics-build.properties
+mono_crash.*
+
+# ---------------------------------------------------------------
+# IDE files. Unity generates the project and solution files.
+# ---------------------------------------------------------------
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.unityproj
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+*.DotSettings.user
+/.vs/
+/.vscode/
+/.idea/
+/.consulo/
+
+# ---------------------------------------------------------------
+# Builds and signing keys. Never commit a keystore.
+# ---------------------------------------------------------------
+*.apk
+*.aab
+*.ipa
+*.app
+*.unitypackage
+*.unitypackage.meta
+*.keystore
+*.jks
+
+# ---------------------------------------------------------------
+# Paid Asset Store packages. The game does not use them and their
+# licenses do not allow sharing them.
+# ---------------------------------------------------------------
+/[Aa]ssets/GameNavigationBar/
+/[Aa]ssets/GameNavigationBar.meta
+/[Aa]ssets/Plugins/Demigiant/DOTweenPro/
+/[Aa]ssets/Plugins/Demigiant/DOTweenPro.meta
+/[Aa]ssets/Plugins/Demigiant/DOTweenPro Examples/
+/[Aa]ssets/Plugins/Demigiant/DOTweenPro Examples.meta
+/[Aa]ssets/Plugins/Demigiant/DemiLib/
+/[Aa]ssets/Plugins/Demigiant/DemiLib.meta
+/[Aa]ssets/Plugins/Demigiant/readme_DOTweenPro.txt*
+
+# ---------------------------------------------------------------
+# .NET logic tests (domain-tests)
+# ---------------------------------------------------------------
+/domain-tests/**/bin/
+/domain-tests/**/obj/
+/domain-tests/**/TestResults/
+/coveragereport/
+/domain-tests/coveragereport/
+
+# The test projects are hand-written, so keep them despite the
+# *.csproj and *.sln rules above.
+!/domain-tests/**/*.csproj
+!/domain-tests/*.sln
+!/domain-tests/*.slnx
+
+# ---------------------------------------------------------------
+# Operating system and editor leftovers
+# ---------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+*~
+*.orig
+*.tmp

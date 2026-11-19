@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845915c4220ec4d71b898c897ea52494, type: 3}
+  m_Name: GameContent
+  m_EditorClassIdentifier: Cubo.View::Cubo.View.GameContent
+  files:
+  - {fileID: 4900000, guid: fb43c678811a8484ab6d6a4a75bfe3d8, type: 3}
+  - {fileID: 4900000, guid: 51c95b8e581df427795f02a5d79d4994, type: 3}
+  - {fileID: 4900000, guid: 4e1f95fde4fd74b1c87b1c3674ca3416, type: 3}
+  - {fileID: 4900000, guid: e08d5eef6d9994211919301705019e92, type: 3}
+  - {fileID: 4900000, guid: b064b721da4cf4b898b4322bef0948aa, type: 3}
+  - {fileID: 4900000, guid: 4b7731888d7f14ee6935c835a079edd4, type: 3}
+  - {fileID: 4900000, guid: 217f39bbdab4f42f08f665a270740b4c, type: 3}
+  - {fileID: 4900000, guid: fec88e937feab4725938a4bce94bf0bb, type: 3}
+  - {fileID: 4900000, guid: 3d3e74c88e0894df68a192fecaa3b209, type: 3}
+  - {fileID: 4900000, guid: ee9fea3ff05434652876b271de9f346c, type: 3}
+  - {fileID: 4900000, guid: b510c59c3fe2c4b32884278a21b44f82, type: 3}
+  - {fileID: 4900000, guid: a034309290934805b6e8c4bca11762a4, type: 3}
+  - {fileID: 4900000, guid: 7ca76739cf14453883f663b304558c32, type: 3}

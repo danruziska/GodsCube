@@ -1,0 +1,59 @@
+{
+ "floors": 6,
+ "healFrac": 0,
+ "reroll": {
+  "base": 10,
+  "step": 5,
+  "note": "Trocar as ofertas da loja (runas e melhorias): base, +step a cada troca na mesma loja"
+ },
+ "sale": 0.5,
+ "potion": {
+  "hp": 15,
+  "price": 30,
+  "note": "A Poção de Cura da loja: +hp de vida para cada herói (3x hp no total), uma por loja"
+ },
+ "enemyDmg": [
+  0.55,
+  0.7,
+  0.9,
+  1,
+  1.05,
+  1.1
+ ],
+ "enemyScale": [
+  0.7,
+  0.8,
+  0.9,
+  1,
+  1.05,
+  1.2
+ ],
+ "levels": [
+  "distraido",
+  "distraido",
+  "distraido",
+  "distraido",
+  "atento",
+  "atento"
+ ],
+ "goldBase": 25,
+ "goldPerFloor": 5,
+ "shopRunes": 3,
+ "shopUpgrades": 2,
+ "blessingSize": 3,
+ "upgradePrices": [
+  30,
+  45,
+  60,
+  90
+ ],
+ "runeSlots": 3,
+ "elite": {
+  "hp": 1.25,
+  "dmg": 1.2,
+  "gold": 1.5,
+  "combo": 0.1
+ },
+ "bossCombo": 0.2,
+ "goldFormula": "goldBase + goldPerFloor * floor; elite multiplica por elite.gold; arredondado"
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Cubo.View",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f578101e4ea0f4116ac30dd12b643713",
+        "GUID:ac8998d2aa090424c9e37b6ce2ed5fc9",
+        "GUID:3b0504fa35e0c404eafc7f29ee23c5da",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,17 @@
+{
+ "note": "Melhorias de habilidade da corrida: cada habilidade tem 4 níveis, na ordem (+, ++, +++, ★). Cada nível SOMA ao anterior: cost, amount (vida ou dano), crit e v (chance) são somados; star lista efeitos que o poder ganha ao ser usado (turns null = até o fim da batalha, 1 = este turno).",
+ "equipment": {
+  "presa": [{"area": 1}, {"n": 1}, {"turns": 1}, {"area": 1}, {"n": 1}, {"area": 1}],
+  "brasa": [{"area": 1}, {"n": 2}, {"turns": 1}, {"area": 1}, {"n": 2}, {"area": 1}]
+ },
+ "abilities": {
+  "rei.0": [{"cost": -1}, {"cost": -1}, {"cost": -1}, {"star": [{"type": "focus", "n": 3, "turns": 1}]}],
+  "rei.1": [{"amount": 4}, {"amount": 4}, {"cost": -2}, {"star": [{"type": "chainMana", "v": 1, "turns": null}]}],
+  "cavaleiro.0": [{"amount": 3}, {"crit": 0.15}, {"amount": 3}, {"star": [{"type": "chainDmg", "v": 0.25, "turns": null}]}],
+  "cavaleiro.1": [{"v": 0.05}, {"v": 0.05}, {"cost": -2}, {"star": [{"type": "combo", "v": 0.2, "turns": null}]}],
+  "joker.0": [{"cost": -1}, {"cost": -1}, {"cost": -1}, {"star": [{"type": "combo", "v": 0.4, "turns": 1}]}],
+  "joker.1": [{"cost": -1}, {"cost": -1}, {"cost": -1}, {"star": [{"type": "focus", "n": 3, "turns": 1}]}],
+  "bispo.0": [{"amount": 4}, {"amount": 4}, {"cost": -2}, {"star": [{"type": "combo", "v": 0.15, "turns": null}]}],
+  "bispo.1": [{"cost": -1}, {"cost": -1}, {"cost": -1}, {"star": [{"type": "combo", "v": 0.3, "turns": 1}]}]
+ }
+}

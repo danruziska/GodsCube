@@ -1,0 +1,7 @@
+[
+ {"id": "folego", "kind": "mana", "price": 25, "n": 4},
+ {"id": "estrela", "kind": "crit", "price": 25, "v": 0.15},
+ {"id": "fluxo", "kind": "combo", "price": 25, "v": 0.2},
+ {"id": "escudo", "kind": "ward", "price": 30, "v": 0.2},
+ {"id": "vida", "kind": "hp", "price": 25, "n": 20}
+]

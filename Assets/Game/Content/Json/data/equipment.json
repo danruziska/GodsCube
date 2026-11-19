@@ -1,0 +1,12 @@
+[
+ {"id": "lamina", "kind": "amount", "n": 3},
+ {"id": "anel", "kind": "mana", "n": 4},
+ {"id": "cetro", "kind": "cost", "n": 1},
+ {"id": "elmo", "kind": "maxHp", "n": 15},
+ {"id": "broquel", "kind": "ward", "v": 0.1},
+ {"id": "trevo", "kind": "combo", "v": 0.05},
+ {"id": "corrente", "kind": "chainDmg", "v": 0.1},
+ {"id": "bolsa", "kind": "gold", "v": 0.3},
+ {"id": "presa", "kind": "poison", "n": 3, "turns": 3},
+ {"id": "brasa", "kind": "burn", "n": 5, "turns": 2}
+]

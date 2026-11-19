@@ -1,0 +1,17 @@
+{
+    "name": "Cubo.App",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f578101e4ea0f4116ac30dd12b643713",
+        "GUID:ac8998d2aa090424c9e37b6ce2ed5fc9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

@@ -1,0 +1,70 @@
+{
+ "player": [
+  {
+   "id": "rei",
+   "colors": [1, 0],
+   "passive": "decreto_real",
+   "powers": [
+    {"id": "rei.0", "index": 0, "color": 1, "kind": "purge", "cost": 10, "purgeColors": [2, 4]},
+    {"id": "rei.1", "index": 1, "color": 0, "kind": "heal", "cost": 11, "amount": 12}
+   ]
+  },
+  {
+   "id": "cavaleiro",
+   "colors": [2, 4],
+   "passive": "investida",
+   "powers": [
+    {"id": "cavaleiro.0", "index": 0, "color": 2, "kind": "damage", "cost": 9, "amount": 10, "crit": 0.3},
+    {"id": "cavaleiro.1", "index": 1, "color": 4, "kind": "critUp", "cost": 10, "v": 0.1}
+   ]
+  },
+  {
+   "id": "joker",
+   "colors": [0, 3],
+   "passive": "trapaca",
+   "powers": [
+    {"id": "joker.0", "index": 0, "color": 0, "kind": "critNext", "cost": 7},
+    {"id": "joker.1", "index": 1, "color": 3, "kind": "extra", "cost": 10}
+   ]
+  },
+  {
+   "id": "bispo",
+   "colors": [3, 1],
+   "passive": "comunhao",
+   "powers": [
+    {"id": "bispo.0", "index": 0, "color": 3, "kind": "heal", "cost": 12, "amount": 12},
+    {"id": "bispo.1", "index": 1, "color": 1, "kind": "purge", "cost": 10, "purgeColors": [2, 0]}
+   ]
+  }
+ ],
+ "defaultTeam": ["rei", "cavaleiro", "bispo"],
+ "enemyTeam": [
+  {
+   "id": "rainha",
+   "colors": [3, 4],
+   "passive": null,
+   "powers": [
+    {"id": "rainha.0", "index": 0, "color": 3, "kind": "damage", "cost": 10, "amount": 12, "crit": 0.3},
+    {"id": "rainha.1", "index": 1, "color": 4, "kind": "heal", "cost": 11, "amount": 12}
+   ]
+  },
+  {
+   "id": "torre",
+   "colors": [2, 0],
+   "passive": null,
+   "powers": [
+    {"id": "torre.0", "index": 0, "color": 2, "kind": "extra", "cost": 11},
+    {"id": "torre.1", "index": 1, "color": 0, "kind": "damage", "cost": 8, "amount": 10}
+   ]
+  },
+  {
+   "id": "peao",
+   "colors": [4, 1],
+   "passive": null,
+   "powers": [
+    {"id": "peao.0", "index": 0, "color": 4, "kind": "critUp", "cost": 10, "v": 0.1},
+    {"id": "peao.1", "index": 1, "color": 1, "kind": "damage", "cost": 8, "amount": 10}
+   ]
+  }
+ ]
+}
